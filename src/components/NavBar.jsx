@@ -28,7 +28,7 @@ const NavBar = () => {
       </div>
       <div className="flex gap-3 items-center">
         <img className="w-10 h-10 rounded-full" src={defaultUser} alt="" />
-        <Button className='bg-slate-500' text={"Login"} />
+        <Button text="Login" />
       </div>
     </div>
   );
