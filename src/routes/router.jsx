@@ -4,6 +4,8 @@ import Home from "../pages/Home";
 import Career from "../pages/Career";
 import About from "../pages/About";
 import Root from "../pages/Root";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -16,12 +18,24 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+      {
         path: "/about",
         element: <About />,
       },
       {
         path: "/career",
         element: <Career />,
+      },
+      {
+        path: "/category/:categoryId",
+        // element: <Career />,
       },
     ],
   },
