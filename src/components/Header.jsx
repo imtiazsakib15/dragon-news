@@ -1,34 +1,15 @@
-import { Link, NavLink } from "react-router-dom";
+import logo from "./../assets/logo.png";
+import moment from "moment";
 
 const Header = () => {
   return (
-    <div className="container mx-auto flex justify-between items-center py-8 px-6">
-      <div>
-        <Link to="/">
-          <h3 className="text-3xl font-bold">Pass Auth</h3>
-        </Link>
+    <>
+      <div className="text-center mt-12 mb-8">
+        <img className="mx-auto" src={logo} alt="" />
+        <p className="mt-5">Journalism Without Fear or Favour</p>
+        <p className="text-lg mt-3">{moment().format("dddd, MMMM D, YYYY")}</p>
       </div>
-      <div className="font-semibold text-lg space-x-6">
-        <NavLink
-          className={({ isActive }) => (isActive ? "text-green-600 " : "")}
-          to="/"
-        >
-          Home
-        </NavLink>
-        <NavLink
-          className={({ isActive }) => (isActive ? "text-green-600 " : "")}
-          to="/login"
-        >
-          Login
-        </NavLink>
-        <NavLink
-          className={({ isActive }) => (isActive ? "text-green-600 " : "")}
-          to="/register"
-        >
-          Register
-        </NavLink>
-      </div>
-    </div>
+    </>
   );
 };
 
